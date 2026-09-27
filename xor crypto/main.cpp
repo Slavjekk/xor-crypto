@@ -1,14 +1,30 @@
-//
-//  main.cpp
-//  xor crypto
-//
-//  Created by Вячеслав on 27.09.2026.
-//
-
 #include <iostream>
+#include <string>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return EXIT_SUCCESS;
+std::string xorCipher(const std::string& text, char key) {
+    std::string result = text;
+    
+    for (size_t i = 0; i < text.size(); i++) {
+        // TODO: сюда одна строчка —
+        // result[i] должен стать text[i] после XOR с key
+    }
+    
+    return result;
+}
+
+int main() {
+    std::string original = "Hello";
+    char key = 'K';
+    
+    std::string encrypted = xorCipher(original, key);
+    std::string decrypted = xorCipher(encrypted, key);
+    
+    std::cout << "Original:  " << original << std::endl;
+    std::cout << "Encrypted: " << encrypted << std::endl;
+    std::cout << "Decrypted: " << decrypted << std::endl;
+    
+    return 0;
+    
+    // SOME CODE
+    // and more code
 }
